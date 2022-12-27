@@ -164,7 +164,6 @@ font-size: clamp(10px,2vw,14px);
 }
 .block3{
     font-size: 13px;
-    background-color: red;
     width: 30rem;
     height: 2rem;
 }
@@ -182,11 +181,9 @@ font-size: clamp(10px,2vw,14px);
     margin-left: 20rem;
     height: 2rem;
     width: 20rem;
-    background-color: red;
 }
 .block3{
     font-size: 11px;
-    background-color: red;
     width: 30rem;
     height: 2rem;
 }
