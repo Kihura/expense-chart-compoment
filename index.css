@@ -9,7 +9,7 @@ body{
 }
 
 .parent{
-    margin-top: 19vw;
+    margin-top: 5vw;
     width: 90vw;
     max-width: 400px;
     height: 120vw;
@@ -134,10 +134,9 @@ color: white;
     width: 80vw;
     height: 47vw;
     max-width: 380px;
-    max-height: 190px;
+    max-height: 250px;
     display: flex;
     flex-direction: row;
-    /* background-color:viol; */
 }
 
 .block2,.block3{
@@ -150,21 +149,10 @@ font-size: clamp(10px,2vw,14px);
 
 }
 
-@media (min-width:430px){
-    /* p{
-        font-size: 2.5vw;
-        margin-right:20vw;
-    }
-    .top img{
-        width: 10vw;
-        max-width: max-content;
-    }
-    .text{
-        font-size: 1.2rem;
-    }
+@media (min-width:1440px){
+    
     .block2{
-        margin-left: 9rem;
-        margin-right: 2rem; */
-    /* } */
+        margin-right: -4rem; */
+    
     
 }
