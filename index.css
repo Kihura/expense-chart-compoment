@@ -169,3 +169,26 @@ font-size: clamp(10px,2vw,14px);
     height: 2rem;
 }
 }
+
+@media (min-width:1600px){
+    
+    .block2{
+        margin-right: -10rem; 
+    
+    
+}
+
+.text:nth-child(1){
+    margin-left: 20rem;
+    height: 2rem;
+    width: 20rem;
+    background-color: red;
+}
+.block3{
+    font-size: 11px;
+    background-color: red;
+    width: 30rem;
+    height: 2rem;
+}
+}
+
