@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="index.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+  <div class="parent">
+    <div class="top">
+      <div class="block">
+        <p>My balance</p>
+        <p>$921.48</p>
+      </div>
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="principale">
+        <div class="text">Spending - Last 7 days</div>
+      <div class="main">
+        <canvas id="myChart">
+        </canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const days = [];
+const amounts = [];
+
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(item => {
+      days.push(item.day);
+      amounts.push(item.amount);
+    });
+  });
+
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: days,
+      datasets: [{
+        data: amounts,
+        backgroundColor: ["hsl(10, 79%, 65%)"],
+        borderRadius: 5,
+        hoverBackgroundColor: "#A1FA80",
+        borderWidth: 1
+
+      }]
+    },
+  });
+  const options = {
+    scales: {
+      y: {
+        ticks: {
+          display: false,
+        },
+        grid: {
+          display: false,
+          drawTicks: false,
+          drawBorder: false,
+        },
+      },
+      x: {
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
+      },
+    },}
+</script>
+      </div>
+      <div class="foot">
+        <div class="block2">
+          <div class="text2">Total this month</div>
+          <div class="text">$478.33</div>
+        </div>
+        <div class="block3">
+          <div class="text">+2.4%</div>
+          <div class="text2">from last month</div>
+        </div>
+            </div>
+      </div>
+  </div>
+  
+  
+</body>
+</html>
